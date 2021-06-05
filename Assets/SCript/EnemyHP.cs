@@ -33,7 +33,7 @@ public class EnemyHP : MonoBehaviour
             if (SHP == 0)
             {
                 Destroy(this.gameObject);
-                SceneManager.LoadScene("Success");
+         
             }
         }
     }

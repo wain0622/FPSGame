@@ -910,6 +910,7 @@ MonoBehaviour:
   SG: {fileID: 697039499}
   FPC: {fileID: 697039502}
   SR: {fileID: 1264504945}
+  Suna: {fileID: 2002884189}
 --- !u!20 &901560249 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0,

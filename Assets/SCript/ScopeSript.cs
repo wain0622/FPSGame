@@ -11,6 +11,7 @@ public class ScopeSript : MonoBehaviour
     public SwitchingGun SG;
     public FirstPersonController FPC;
     public GameObject SR;
+    public GameObject Suna;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +48,7 @@ public class ScopeSript : MonoBehaviour
                 SRCanvas.SetActive(false);
                 FPC.enabled = true;
                 SR.SetActive(true);
+                Suna.transform.localRotation = Quaternion.Euler(0, 0, 0);
             }
         }
 

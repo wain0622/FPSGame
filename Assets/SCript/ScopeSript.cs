@@ -10,9 +10,11 @@ public class ScopeSript : MonoBehaviour
     public GameObject SRCanvas;
     public SwitchingGun SG;
     public FirstPersonController FPC;
+    public GameObject SR;
     // Start is called before the first frame update
     void Start()
     {
+        SR.SetActive(false);
         mainCamera.enabled = true;
         SRCamera.enabled = false;
         mainCanvas.SetActive(true);
@@ -34,6 +36,7 @@ public class ScopeSript : MonoBehaviour
                 mainCanvas.SetActive(false);
                 SRCanvas.SetActive(true);
                 FPC.enabled = false;
+                SR.SetActive(false);
             }
 
             if (Input.GetMouseButtonUp(1))
@@ -43,6 +46,7 @@ public class ScopeSript : MonoBehaviour
                 mainCanvas.SetActive(true);
                 SRCanvas.SetActive(false);
                 FPC.enabled = true;
+                SR.SetActive(true);
             }
         }
 

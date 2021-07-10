@@ -6,6 +6,7 @@ public class SwitchingGun : MonoBehaviour
 {
     public GameObject[] items;
     public int itemNumber;
+    public GameObject aim;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,11 @@ public class SwitchingGun : MonoBehaviour
             items[itemNumber].SetActive(false);
             itemNumber = 1;
             items[itemNumber].SetActive(true);
+            if (aim.activeSelf)
+            {
+                aim.SetActive(false);
+            }
+            
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha0))//もし1キーが押されたら
@@ -32,6 +38,13 @@ public class SwitchingGun : MonoBehaviour
             items[itemNumber].SetActive(false);
             itemNumber = 0;
             items[itemNumber].SetActive(true);
+            if (!aim.activeSelf)
+            {
+                aim.SetActive(true);
+            }
+
         }
+
+        
     }
 }

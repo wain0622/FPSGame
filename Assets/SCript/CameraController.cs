@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public Transform verRot;
-    public Transform horRot;
-    
+    private Transform verRot;
+    private Transform horRot;
+    public float maxLimit;
+    public float minLimit;
+    public float coreX;
     // Start is called before the first frame update
     void Start()
     {
         verRot = transform.parent;
         horRot = GetComponent<Transform>();
+        coreX = horRot.transform.localEulerAngles.x;
     }
 
     // Update is called once per frame
@@ -19,9 +22,17 @@ public class CameraController : MonoBehaviour
     {
         float X_Rotetion = Input.GetAxis("Mouse X");
         float Y_Rotetion = Input.GetAxis("Mouse Y");
-        verRot.transform.Rotate(0, X_Rotetion, 0);
-        horRot.transform.Rotate(-Y_Rotetion, 0, 0);
-        transform.localRotation = Quaternion.Euler(Mathf.Clamp(transform.localEulerAngles.x,-50, 50), 0, 0) ;
+        Vector3 verRotAngles = verRot.transform.localEulerAngles;
+        verRotAngles.y += X_Rotetion;
+        verRot.transform.localEulerAngles = verRotAngles;
+
+        Vector3 horRotAngles = horRot.transform.localEulerAngles;
+        coreX -= Y_Rotetion;
+        coreX = Mathf.Clamp(coreX, minLimit, maxLimit);
+        horRotAngles.x = coreX;
+        horRot.transform.localEulerAngles = horRotAngles;
+
+
     }
 }
 

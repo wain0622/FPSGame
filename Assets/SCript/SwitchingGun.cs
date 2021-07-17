@@ -7,6 +7,7 @@ public class SwitchingGun : MonoBehaviour
     public GameObject[] items;
     public int itemNumber;
     public GameObject aim;
+    public GameObject Sshooting;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,7 @@ public class SwitchingGun : MonoBehaviour
             if (aim.activeSelf)
             {
                 aim.SetActive(false);
+                Sshooting.SetActive(true);
             }
             
         }
@@ -41,6 +43,7 @@ public class SwitchingGun : MonoBehaviour
             if (!aim.activeSelf)
             {
                 aim.SetActive(true);
+                Sshooting.SetActive(false);
             }
 
         }

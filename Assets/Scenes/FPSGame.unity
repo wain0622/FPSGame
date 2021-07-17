@@ -846,6 +846,7 @@ MonoBehaviour:
   - {fileID: 1264504945}
   itemNumber: 0
   aim: {fileID: 1690690653}
+  Sshooting: {fileID: 808863840}
 --- !u!114 &697039502 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0,

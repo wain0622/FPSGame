@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4696054087769883924}
   - component: {fileID: 4696054087770884052}
   m_Layer: 0
-  m_Name: default
+  m_Name: color
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,6 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ZombiHP: 100
+  _renderer: {fileID: 4696054087770884052}
 --- !u!65 &28651644303572695
 BoxCollider:
   m_ObjectHideFlags: 0

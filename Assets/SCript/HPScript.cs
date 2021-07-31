@@ -17,33 +17,44 @@ public class HPScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-     if (collision.gameObject.tag == "Spider")
+
+        if (collision.gameObject.tag == "Target")
+        {
+            HP.value += 20;
+            PHP += 20;
+            Destroy(collision.gameObject);
+
+        }
+
+        if (collision.gameObject.tag == "Spider")
         {
             HP.value -= 10;
             PHP -= 10;
 
             if (PHP == 0)
             {
-                SceneManager.LoadScene("GameOver"); 
+                SceneManager.LoadScene("GameOver");
             }
-            
+
         }
-     if (collision.gameObject.tag == "ZOMBI")
+        if (collision.gameObject.tag == "ZOMBI")
         {
             HP.value -= 20;
             PHP -= 20;
 
-            if(PHP <= 0)
+            if (PHP <= 0)
             {
                 SceneManager.LoadScene("GameOver");
             }
         }
-    
+
+   
+
     }
 
 

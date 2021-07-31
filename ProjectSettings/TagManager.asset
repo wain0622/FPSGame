@@ -9,6 +9,7 @@ TagManager:
   - Shell
   - Spider
   - ZOMBI
+  - Hart
   layers:
   - Default
   - TransparentFX

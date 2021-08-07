@@ -5,6 +5,7 @@ using DG.Tweening;
 
 public class ZombiDamage : MonoBehaviour
 {
+    public GMscript gMscript;
     public int ZombiHP = 100;
     private static readonly int PRORERTY_COLOR = Shader.PropertyToID("_Color");
     /// <summary> モデルのRenderer </summary>
@@ -25,7 +26,8 @@ public class ZombiDamage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gMscript = GameObject.FindGameObjectWithTag("Mastor").GetComponent<GMscript>();
+
     }
 
     // Update is called once per frame
@@ -45,6 +47,7 @@ public class ZombiDamage : MonoBehaviour
 
        if (ZombiHP <= 0)
         {
+            gMscript.EnemyCount--; 
             Destroy(this.gameObject);
 
         }

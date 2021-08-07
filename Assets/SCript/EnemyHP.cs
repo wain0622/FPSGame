@@ -5,13 +5,14 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class EnemyHP : MonoBehaviour
 {
-
+    public GMscript gMscript;
     public GameObject Explosion;
     public Slider enemyHP;
     public int SHP;
     // Start is called before the first frame update
     void Start()
     {
+        gMscript = GameObject.FindGameObjectWithTag("Mastor").GetComponent<GMscript>();//GMscriptを教える
         enemyHP.value = 200;//enemyHPを200にする
         SHP = 200;//SHPを200にする
     }
@@ -32,9 +33,9 @@ public class EnemyHP : MonoBehaviour
 
             if (SHP == 0)
             {
+                gMscript.EnemyCount--;
                 Destroy(this.gameObject);
-                Debug.Log("ok");
-         
+               
             }
         }
     }

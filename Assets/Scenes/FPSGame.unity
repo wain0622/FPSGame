@@ -910,6 +910,7 @@ MonoBehaviour:
     type: 3}
   shotSpeed: 2000
   shotCount: 1
+  shellName: SR
 --- !u!20 &901560249 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0,
@@ -2256,6 +2257,7 @@ MonoBehaviour:
     type: 3}
   shotSpeed: 2000
   shotCount: 30
+  shellName: AR
 --- !u!4 &1909197462 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 2c3499a930b25664489c160f38b7658a,
